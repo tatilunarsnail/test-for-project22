@@ -54,13 +54,9 @@ img {
 .advertisement {
     padding: 80px 10px;
     background: #fbfbfb;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 10px;
 }
 .ad-text {
+    position:relative;
     padding: 0 10px;
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
@@ -71,11 +67,16 @@ img {
     text-transform: uppercase;
     color: #141414;
 }
-.ad-text-green {
-    padding: 0 10px;
-    color: #FBFBFB;
-    background-color: #576F35;
+.green-box {
+    position:absolute;
     border-radius: 12px;
+    border: none;
+    background-color: #576F35;
+    width: 355px;
+    height: 102px;
+}
+.ad-text-white {
+    color: #FBFBFB;
 }
 @media screen and (min-width: 375px) {
 
@@ -92,11 +93,13 @@ img {
         padding: 100px 16px;
     }
     .ad-text {
+        padding: 8px 16px;
         font-size: 64px;
         line-height: 70px;
     }
-    .ad-text-green {
-        padding: 8px 16px;
+    .green-box {
+        width: 736px;
+        height: 86px;
     }
 }
 @media screen and (min-width: 1280px) {
@@ -108,14 +111,13 @@ img {
         display: flex;
         padding: 100px;
     }
-
+    .green-box {
+        width: 808px;
+        height: 86px;
+    }
     .ad-text {
+        padding: 0 13px;
         font-size: 76px;
         line-height: 80px;
-    }
-
-    .ad-text-green {
-        display: inline-block;
-        padding: 0px 13px;
     }
 }
