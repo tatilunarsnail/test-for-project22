@@ -34,10 +34,7 @@ img {
     max-width: 100%;
     height: auto;
 }
-.container {
-    padding: 0 15px;
-    margin: 0 auto;
-}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -51,13 +48,13 @@ img {
     overflow: hidden;
 }
 /* ==================================SECTION============================= */
+
 .advertisement {
     padding: 80px 10px;
     background: #fbfbfb;
 }
+
 .ad-text {
-    position:relative;
-    padding: 0 10px;
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
     font-size: 48px;
@@ -66,58 +63,73 @@ img {
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: #141414;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.green-box {
-    position:absolute;
+
+.ad-text-background {
+    padding: 8px 10px;
     border-radius: 12px;
     border: none;
     background-color: #576F35;
-    width: 355px;
-    height: 102px;
-}
-.ad-text-white {
     color: #FBFBFB;
 }
+
 @media screen and (min-width: 375px) {
 
-    .container {
+    .advertisement {
         max-width: 375px;
+        margin: 0 auto;
     }
 }
+
 @media screen and (min-width: 768px) {
 
-    .container {
-        max-width: 768px;
-    }
     .advertisement {
-        padding: 100px 16px;
+        max-width: 768px;
+        padding: 100px 0px;
     }
-    .ad-text {
+
+    .ad-text-background {
         padding: 8px 16px;
+    }
+
+    .ad-text {
         font-size: 64px;
         line-height: 70px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
-    .green-box {
-        width: 736px;
-        height: 86px;
-    }
+
 }
+
 @media screen and (min-width: 1280px) {
 
-    .container {
-        max-width: 1280px;
-    }
     .advertisement {
-        display: flex;
+        max-width: 1280px;
         padding: 100px;
     }
-    .green-box {
-        width: 808px;
-        height: 86px;
-    }
+
     .ad-text {
+        display: inline-block;
         padding: 0 13px;
         font-size: 76px;
         line-height: 80px;
+        padding: 0 13px;
     }
+
+    .ad-text-background {
+        padding: 0 13px;
+    }
+
+    .ad-text-wrap {
+        position: relative;
+    }
+
+    .ad-span {
+        position: absolute;
+        top: 0;
+        right: 30px;
+    }
+
 }
